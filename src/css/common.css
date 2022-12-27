@@ -10,9 +10,50 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  padding: 0;
+  margin: 0;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+.timer {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  padding: 100px;
+  width: 800px;
+  margin:auto;
+  border: 1px solid black;
+  border-radius: 10px;
+
+}
+
+.field {
+  display: flex;
+  border: 3px solid black;  
+  width: 180px;
+flex-direction: column;
+padding: 10px;
+border-radius: 10%;
+background-color: yellow;
+text-align: center;
+}
+
+.value {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fd0101;
+    text-shadow: 2px 2px 4px #fbfbfb
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 2px 2px 4px #fbfbfb;
 }
