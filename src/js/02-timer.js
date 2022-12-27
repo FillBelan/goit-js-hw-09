@@ -2,6 +2,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
 let ms = null;
+
 function convertMs(ms) {
   const second = 1000;
   const minute = second * 60;
@@ -48,13 +49,13 @@ function inputDate(selectedDates) {
 let timerId = null;
 
 function addLeadingZero(x) {
- return x.toString().padStart(2, '')
-};
+  return x.toString().padStart(2, '');
+}
 
 function timeStart(selectedDates) {
   ms = Date.parse(selectedDates) - Date.now();
 
-    let newConvert = convertMs(ms);
+  let newConvert = convertMs(ms);
 
   ref.startBtn.addEventListener('click', () => {
     ref.startBtn.setAttribute('disabled', 'disabled');
@@ -69,16 +70,19 @@ function timeStart(selectedDates) {
       // const seconds = Math.floor((diffTime % oneMinute) / 1000);
       newConvert = convertMs(ms);
 
-        ref.days.textContent = addLeadingZero(newConvert.days);
-    //   ref.days.textContent = newConvert.days.toString().padStart(2, '');
-        ref.hours.textContent = addLeadingZero(newConvert.hours);
-    //   ref.hours.textContent = newConvert.hours.toString().padStart(2, '');
-        ref.minutes.textContent = addLeadingZero(newConvert.minutes);
-    //   ref.minutes.textContent = newConvert.minutes.toString().padStart(2, '');
-        ref.seconds.textContent = addLeadingZero(newConvert.seconds);
-    //   ref.seconds.textContent = newConvert.seconds.toString().padStart(2, '');
+      ref.days.textContent = addLeadingZero(newConvert.days);
+      //   ref.days.textContent = newConvert.days.toString().padStart(2, '');
+      ref.hours.textContent = addLeadingZero(newConvert.hours);
+      //   ref.hours.textContent = newConvert.hours.toString().padStart(2, '');
+      ref.minutes.textContent = addLeadingZero(newConvert.minutes);
+      //   ref.minutes.textContent = newConvert.minutes.toString().padStart(2, '');
+      ref.seconds.textContent = addLeadingZero(newConvert.seconds);
+      //   ref.seconds.textContent = newConvert.seconds.toString().padStart(2, '');
       ms -= 1000;
     }, 1000);
   });
 }
+
+
+
 
