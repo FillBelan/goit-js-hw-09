@@ -10,7 +10,7 @@ function submitForm(e) {
 
   let stepNumber = Number(delay.value);
 
-  for (let i = 1; i < amount.value; i += 1) {
+  for (let i = 1; i <= amount.value; i += 1) {
     createPromise(i, stepNumber)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
